@@ -1,9 +1,9 @@
-import SendOTPForm from "../features/authentication/SendOTPForm";
+import AuthContainer from "../features/authentication/AuthContainer";
 
 function AuthPage() {
   return (
-    <div className="w-full sm:max-w-sm flex items-center justify-center">
-      <SendOTPForm />
+    <div className=" flex items-center justify-center pt-16">
+      <AuthContainer />
     </div>
   );
 }
