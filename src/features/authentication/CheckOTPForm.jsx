@@ -25,12 +25,15 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
       const { user, message } = await mutateAsync({ phoneNumber, otp });
       console.log(data);
       toast.success(message);
-      if (user?.isActive) {
-        if (user?.role === "OWNER") navigate("/owner");
-        if (user?.role === "FREELANCER") navigate("/freelancer");
-      } else {
-        navigate("/complete-profile");
+
+      if (!user?.isActive) return navigate("/complete-profile");
+      if (user.status !== 2) {
+        navigate("/");
+        toast("پروفایل شما در انتظار تایید است", { icon: "👍" });
+        return;
       }
+      if (user?.role === "OWNER") return navigate("/owner");
+      if (user?.role === "FREELANCER") return navigate("/freelancer");
     } catch (error) {
       toast.error(error?.response?.data?.message);
     }
@@ -45,7 +48,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
   }, [time]);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen space-y-4">
       <button onClick={onBack}>
         <HiArrowRight className="w-5 h-5 text-secondary-600" />
       </button>
