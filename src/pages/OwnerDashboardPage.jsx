@@ -1,5 +1,11 @@
+import OwnerDashboard from "../features/owner/OwnerDashboard";
+
 function OwnerDashboardPage() {
-  return <div>Owner Dashboard</div>;
+  return (
+    <div>
+      <OwnerDashboard />
+    </div>
+  );
 }
 
 export default OwnerDashboardPage;
