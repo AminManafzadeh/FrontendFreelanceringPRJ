@@ -32,9 +32,10 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
         toast("پروفایل شما در انتظار تایید است", { icon: "👍" });
         return;
       }
-      if (user?.role === "OWNER") return navigate("/owner");
-      if (user?.role === "FREELANCER") return navigate("/freelancer");
-      if (user?.role === "ADMIN") return navigate("/admin");
+      if (user.status == 2 && user?.role === "OWNER") return navigate("/owner");
+      if (user.status == 2 && user?.role === "FREELANCER")
+        return navigate("/freelancer");
+      if (user.status == 2 && user?.role === "ADMIN") return navigate("/admin");
     } catch (error) {
       toast.error(error?.response?.data?.message);
     }
@@ -54,7 +55,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
         <HiArrowRight className="w-5 h-5 text-secondary-600" />
       </button>
       {otpResponse && (
-        <p className="flex items-center">
+        <p className="flex items-center text-secondary-700">
           کد تایید برای شماره موبایل ارسال شد {otpResponse?.phoneNumber}
           <button onClick={onBack} className="mr-3">
             <CiEdit className="w-5 h-5 text-primary-800" />
@@ -63,10 +64,10 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
       )}
       <div>
         {time > 0 ? (
-          <p>{time} ثانیه تا ارسال مجدد کد</p>
+          <p className="text-secondary-700">{time} ثانیه تا ارسال مجدد کد</p>
         ) : (
           <button onClick={onResendOtp} className="btn btn--secondary my-3">
-            اررسال مجدد کد تایید
+            ارسال مجدد کد تایید
           </button>
         )}
       </div>

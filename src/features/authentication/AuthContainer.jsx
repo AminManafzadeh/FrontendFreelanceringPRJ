@@ -26,6 +26,7 @@ function AuthContainer() {
   } = useMutation({
     mutationFn: getOtp,
   });
+  console.log(otpResponse);
 
   const sendOtpHandler = async (data) => {
     try {
