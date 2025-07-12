@@ -7,16 +7,16 @@ import ChangeProposalStatus from "./ChangeProposalStatus";
 
 const statusContainer = [
   {
-    className: "badge--success",
-    label: "تایید شده",
-  },
-  {
     className: "badge--danger",
     label: "رد شده",
   },
   {
     className: "badge--secondary",
     label: "در انتظار تایید ",
+  },
+  {
+    className: "badge--success",
+    label: "تایید شده",
   },
 ];
 

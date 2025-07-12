@@ -3,11 +3,11 @@ import {
   HiCurrencyDollar,
   HiOutlineViewGrid,
 } from "react-icons/hi";
-import Stat from "./Stat";
+import Stat from "../../ui/Stat";
 
 function Stats({ projects }) {
   const numOfProjects = projects?.length;
-  const numOfAcceptedProjects = projects?.map((p) => p.status === 2).length;
+  const numOfAcceptedProjects = projects?.filter((p) => p.status === 2).length;
   const numOfProposals = projects?.reduce(
     (acc, curr) => curr.proposals.length + acc,
     0

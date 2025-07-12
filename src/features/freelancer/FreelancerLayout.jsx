@@ -1,10 +1,11 @@
-import { GoHome } from "react-icons/go";
-import { FaDiagramProject } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 import AppLayout from "../../ui/AppLayout";
 import SideBar from "../../ui/SideBar";
-import { NavLink } from "react-router-dom";
+import { GoHome } from "react-icons/go";
+import { FaDiagramProject } from "react-icons/fa6";
+import { PiGitPullRequest } from "react-icons/pi";
 
-function OwnerLayout() {
+function FreelancerLayout() {
   return (
     <AppLayout>
       <SideBar>
@@ -21,9 +22,16 @@ function OwnerLayout() {
             <span>پروژه ها</span>
           </NavLink>
         </li>
+
+        <li>
+          <NavLink className="navlinkStyle" to="/freelancer/proposals">
+            <PiGitPullRequest className="w-5 h-5" />
+            <span>درخواست ها</span>
+          </NavLink>
+        </li>
       </SideBar>
     </AppLayout>
   );
 }
 
-export default OwnerLayout;
+export default FreelancerLayout;

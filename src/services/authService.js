@@ -18,6 +18,16 @@ export function getUser() {
   return http.get("/user/profile").then(({ data }) => data.data);
 }
 
+export function getAllUsersApi() {
+  return http.get("/admin/user/list").then(({ data }) => data.data);
+}
+
 export function logoutApi() {
   return http.post("/user/logout").then(({ data }) => data.data);
+}
+
+export function changeUserStatusApi({ userId, data }) {
+  return http
+    .patch(`/admin/user/verify/${userId}`, data)
+    .then(({ data }) => data.data);
 }
