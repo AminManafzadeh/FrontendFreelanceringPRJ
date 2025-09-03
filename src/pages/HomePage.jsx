@@ -269,22 +269,34 @@ function HomePage() {
               </h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     پروژه‌های برنامه‌نویسی
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     طراحی گرافیک
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     بازاریابی دیجیتال
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     ترجمه
                   </a>
                 </li>
@@ -296,17 +308,26 @@ function HomePage() {
               </h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     مرکز راهنمایی
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     تماس با ما
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     گزارش مشکل
                   </a>
                 </li>
@@ -318,17 +339,26 @@ function HomePage() {
               </h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     شرایط استفاده
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     حریم خصوصی
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary-700 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-secondary-700 transition-colors"
+                  >
                     قوانین سایت
                   </a>
                 </li>
