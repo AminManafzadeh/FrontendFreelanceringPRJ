@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import useAuthorize from "../features/authentication/useAuthorize";
 import useLogout from "../features/authentication/useLogout";
+import DarkModeToggle from "../ui/DarkModeToggle";
 
 function HomePage() {
   const [stats] = useState({
@@ -37,12 +38,15 @@ function HomePage() {
   ];
 
   return (
-    <div className="bg-secondary-0 min-h-screen text-secondary-900">
+    <div className="bg-secondary-0 min-h-screen text-secondary-700">
       {/* Header Section */}
       <header className="bg-gradient-to-r from-primary-900 to-primary-700 text-white">
         <div className="container xl:max-w-screen-xl mx-auto px-4 sm:px-6 py-4">
           <nav className="flex flex-col sm:flex-row justify-between items-center gap-y-4 sm:gap-y-0">
-            <div className="text-xl sm:text-2xl font-bold">فریلنسر</div>
+            <div className="flex items-center gap-4">
+              <div className="text-xl sm:text-2xl font-bold">فریلنسر</div>
+              <DarkModeToggle />
+            </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto items-center">
               {isAuthenticated ? (
                 <>
@@ -145,7 +149,7 @@ function HomePage() {
       <section className="py-12 sm:py-16 bg-secondary-50">
         <div className="container xl:max-w-screen-xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center">
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-secondary-0 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-primary-900 mb-2">
                 {stats.projects.toLocaleString("fa-IR")}+
               </div>
@@ -153,7 +157,7 @@ function HomePage() {
                 پروژه تکمیل شده
               </div>
             </div>
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-secondary-0 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-primary-900 mb-2">
                 {stats.freelancers.toLocaleString("fa-IR")}+
               </div>
@@ -161,7 +165,7 @@ function HomePage() {
                 فریلنسر فعال
               </div>
             </div>
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 sm:col-span-2 lg:col-span-1">
+            <div className="bg-secondary-0 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 sm:col-span-2 lg:col-span-1">
               <div className="text-3xl sm:text-4xl font-bold text-primary-900 mb-2">
                 {stats.clients.toLocaleString("fa-IR")}+
               </div>
@@ -177,7 +181,7 @@ function HomePage() {
       <section className="py-16 sm:py-20">
         <div className="container xl:max-w-screen-xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-secondary-700">
               چرا ما را انتخاب کنید؟
             </h2>
             <p className="text-secondary-600 text-base sm:text-lg lg:text-xl max-w-xl lg:max-w-2xl mx-auto px-4 sm:px-0">
@@ -195,7 +199,7 @@ function HomePage() {
                 <div className="bg-gradient-to-r from-primary-100 to-primary-50 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center text-2xl sm:text-3xl group-hover:from-primary-200 group-hover:to-primary-100 transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-secondary-700">
                   {feature.title}
                 </h3>
                 <p className="text-secondary-600 leading-relaxed text-sm sm:text-base px-2 sm:px-0">
@@ -248,11 +252,11 @@ function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary-800 text-secondary-300 py-8 sm:py-12">
+      <footer className="bg-secondary-100 text-secondary-600 py-8 sm:py-12">
         <div className="container xl:max-w-screen-xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-secondary-700 mb-3 sm:mb-4">
                 فریلنسر
               </h3>
               <p className="leading-relaxed text-sm sm:text-base">
@@ -260,78 +264,78 @@ function HomePage() {
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-3 sm:mb-4 text-base sm:text-lg">
+              <h4 className="font-bold text-secondary-700 mb-3 sm:mb-4 text-base sm:text-lg">
                 خدمات
               </h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     پروژه‌های برنامه‌نویسی
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     طراحی گرافیک
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     بازاریابی دیجیتال
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     ترجمه
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-3 sm:mb-4 text-base sm:text-lg">
+              <h4 className="font-bold text-secondary-700 mb-3 sm:mb-4 text-base sm:text-lg">
                 پشتیبانی
               </h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     مرکز راهنمایی
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     تماس با ما
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     گزارش مشکل
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-3 sm:mb-4 text-base sm:text-lg">
+              <h4 className="font-bold text-secondary-700 mb-3 sm:mb-4 text-base sm:text-lg">
                 قوانین
               </h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     شرایط استفاده
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     حریم خصوصی
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-secondary-700 transition-colors">
                     قوانین سایت
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-secondary-600 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
+          <div className="border-t border-secondary-300 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="text-sm sm:text-base">
               &copy; ۱۴۰۴ فریلنسر. تمامی حقوق محفوظ است.
             </p>

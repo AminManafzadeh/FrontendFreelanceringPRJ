@@ -1,7 +1,9 @@
 function Table({ children }) {
   return (
-    <div className="bg-secondary-0 overflow-x-auto">
-      <table>{children}</table>
+    <div className="bg-secondary-0 rounded-lg shadow-sm overflow-hidden">
+      <div className="overflow-x-auto">
+        <table className="min-w-full">{children}</table>
+      </div>
     </div>
   );
 }

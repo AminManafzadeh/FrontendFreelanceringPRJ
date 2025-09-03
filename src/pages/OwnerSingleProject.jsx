@@ -10,9 +10,11 @@ function OwnerSingleProject() {
   if (isLoading) return <Loading width="4rem" height="4rem" />;
 
   return (
-    <div>
+    <div className="space-y-4 sm:space-y-6 lg:space-y-8">
       <SingleProjectHeader project={project} />
-      <ProposalsTable proposals={project?.proposals} />
+      <div className="overflow-hidden">
+        <ProposalsTable proposals={project?.proposals} />
+      </div>
     </div>
   );
 }

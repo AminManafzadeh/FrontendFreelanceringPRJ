@@ -26,13 +26,19 @@ function ProposalRow({ proposal, index }) {
 
   return (
     <Table.Row>
-      <td>{index + 1}</td>
-      <td>{truncateText(proposal.description, 30)}</td>
-      <td>
-        <p>{proposal.duration} روز</p>
+      <td className="text-xs sm:text-sm">
+        {englishToPersianNumber(index + 1)}
       </td>
-      <td>{englishToPersianNumber(proposal.price)} تومان</td>
-      <td>
+      <td className="text-xs sm:text-sm">
+        {truncateText(proposal.description, 30)}
+      </td>
+      <td className="text-xs sm:text-sm">
+        <p>{englishToPersianNumber(proposal.duration)} روز</p>
+      </td>
+      <td className="text-xs sm:text-sm">
+        {englishToPersianNumber(proposal.price)} تومان
+      </td>
+      <td className="text-xs sm:text-sm">
         <span className={`badge ${statusContainer[status].className}`}>
           {statusContainer[status].label}
         </span>
@@ -40,7 +46,7 @@ function ProposalRow({ proposal, index }) {
       <td>
         <button
           onClick={() => setOpen(true)}
-          className="btn btn--secondary text-secondary-0"
+          className="btn btn--secondary text-secondary-0 text-xs sm:text-sm px-2 py-1 sm:px-3 sm:py-2"
         >
           تغییر وضعیت
         </button>

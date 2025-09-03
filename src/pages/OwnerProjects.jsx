@@ -3,9 +3,11 @@ import ProjectTable from "../features/projects/ProjectTable";
 
 function OwnerProjects() {
   return (
-    <div>
+    <div className="space-y-4 sm:space-y-6 lg:space-y-8">
       <ProjectHeader />
-      <ProjectTable />
+      <div className="overflow-hidden">
+        <ProjectTable />
+      </div>
     </div>
   );
 }

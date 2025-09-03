@@ -8,11 +8,11 @@ function DarkModeToggle() {
 
   return (
     <div>
-      <button onClick={toggleDarkMode}>
+      <button onClick={toggleDarkMode} className="p-1">
         {isDarkMode ? (
-          <HiOutlineSun className="w-5 h-5 text-primary-700 mt-2" />
+          <HiOutlineSun className="w-4 h-4 sm:w-5 sm:h-5 text-primary-700" />
         ) : (
-          <HiOutlineMoon className="w-5 h-5 text-primary-700 mt-2" />
+          <HiOutlineMoon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-700" />
         )}
       </button>
     </div>

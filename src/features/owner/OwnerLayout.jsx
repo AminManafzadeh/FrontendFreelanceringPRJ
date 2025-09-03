@@ -10,14 +10,14 @@ function OwnerLayout() {
       <SideBar>
         <li>
           <NavLink className="navlinkStyle" to="dashboard">
-            <GoHome className="w-5 h-5" />
+            <GoHome className="w-5 h-5 lg:w-5 lg:h-5" />
             <span>دشبورد</span>
           </NavLink>
         </li>
 
         <li>
           <NavLink className="navlinkStyle" to="projects">
-            <FaDiagramProject className="w-5 h-5" />
+            <FaDiagramProject className="w-5 h-5 lg:w-5 lg:h-5" />
             <span>پروژه ها</span>
           </NavLink>
         </li>

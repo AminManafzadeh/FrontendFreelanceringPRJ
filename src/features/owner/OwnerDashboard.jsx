@@ -9,7 +9,7 @@ function OwnerDashboard() {
   if (isLoading) return <Loading width="4rem" height="4rem" />;
 
   return (
-    <div>
+    <div className="p-4 sm:p-6 lg:p-8">
       <OwnerDashboardHeader />
       <Stats projects={projects} />
     </div>

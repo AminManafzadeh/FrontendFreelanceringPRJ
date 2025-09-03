@@ -6,10 +6,10 @@ import Logout from "../features/authentication/Logout";
 function HeaderMenu() {
   return (
     <div>
-      <ul className="flex gap-x-4 items-center">
+      <ul className="flex gap-x-2 sm:gap-x-4 items-center">
         <li className="flex">
-          <Link to="dashboard">
-            <HiOutlineUser className=" w-5 h-5 text-primary-900" />
+          <Link to="dashboard" className="p-1">
+            <HiOutlineUser className="w-4 h-4 sm:w-5 sm:h-5 text-primary-900" />
           </Link>
         </li>
         <li className="flex">

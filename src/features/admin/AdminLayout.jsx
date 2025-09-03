@@ -13,28 +13,28 @@ function AdminLayout() {
         <SideBar>
           <li>
             <NavLink className="navlinkStyle" to="/admin/dashboard">
-              <GoHome className="w-5 h-5" />
+              <GoHome className="w-5 h-5 lg:w-5 lg:h-5" />
               <span>دشبورد</span>
             </NavLink>
           </li>
 
           <li>
             <NavLink className="navlinkStyle" to="/admin/users">
-              <CiUser className="w-5 h-5" />
+              <CiUser className="w-5 h-5 lg:w-5 lg:h-5" />
               <span>کاربران</span>
             </NavLink>
           </li>
 
           <li>
             <NavLink className="navlinkStyle" to="/admin/projects">
-              <FaDiagramProject className="w-5 h-5" />
+              <FaDiagramProject className="w-5 h-5 lg:w-5 lg:h-5" />
               <span>پروژه ها</span>
             </NavLink>
           </li>
 
           <li>
             <NavLink className="navlinkStyle" to="/admin/proposals">
-              <PiGitPullRequest className="w-5 h-5" />
+              <PiGitPullRequest className="w-5 h-5 lg:w-5 lg:h-5" />
               <span>درخواست ها</span>
             </NavLink>
           </li>

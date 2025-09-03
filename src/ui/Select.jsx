@@ -1,7 +1,7 @@
 function Select({ value, onChange, options }) {
   return (
     <select
-      className="textField__input p-2 text-xs bg-secondary-0"
+      className="textField__input p-2 sm:p-3 text-xs sm:text-sm bg-secondary-0 w-full min-w-0"
       value={value}
       onChange={onChange}
     >

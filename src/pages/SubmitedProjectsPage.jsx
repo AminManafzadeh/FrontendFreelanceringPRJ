@@ -3,9 +3,11 @@ import ProjectsTable from "../features/freelancer/projects/ProjectsTable";
 
 function SubmitedProjectsPage() {
   return (
-    <div>
+    <div className="space-y-4 sm:space-y-6 lg:space-y-8">
       <ProjectsHeader />
-      <ProjectsTable />
+      <div className="overflow-hidden">
+        <ProjectsTable />
+      </div>
     </div>
   );
 }

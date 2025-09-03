@@ -17,20 +17,51 @@ function ProjectsHeader() {
   const { transformedCategories } = useCategory();
 
   return (
-    <div className="flex items-center justify-between text-secondary-700 mb-8">
-      <h1 className="font-bold text-lg">لیست پروژه ها</h1>
-      <div className="font-semibold flex items-center gap-x-4">
-        <Filter filterField="status" options={statusOptions} />
+    <div className="space-y-4 lg:space-y-0">
+      {/* Mobile Layout */}
+      <div className="lg:hidden">
+        <h1 className="font-bold text-lg sm:text-xl text-secondary-700 mb-4">
+          لیست پروژه ها
+        </h1>
 
-        <FilterDropDown
-          filterField="category"
-          options={[
-            { value: "All", label: "دسته بندی (همه)" },
-            ...transformedCategories,
-          ]}
-        />
+        {/* Mobile Filters - Stacked */}
+        <div className="space-y-3">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex-1">
+              <Filter filterField="status" options={statusOptions} />
+            </div>
+            <div className="flex-1">
+              <FilterDropDown
+                filterField="category"
+                options={[
+                  { value: "All", label: "دسته بندی (همه)" },
+                  ...transformedCategories,
+                ]}
+              />
+            </div>
+          </div>
+          <div className="w-full sm:w-auto">
+            <FilterDropDown filterField="sort" options={sortOptions} />
+          </div>
+        </div>
+      </div>
 
-        <FilterDropDown filterField="sort" options={sortOptions} />
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex lg:items-center lg:justify-between text-secondary-700">
+        <h1 className="font-bold text-xl">لیست پروژه ها</h1>
+        <div className="font-semibold flex items-center gap-x-4">
+          <Filter filterField="status" options={statusOptions} />
+
+          <FilterDropDown
+            filterField="category"
+            options={[
+              { value: "All", label: "دسته بندی (همه)" },
+              ...transformedCategories,
+            ]}
+          />
+
+          <FilterDropDown filterField="sort" options={sortOptions} />
+        </div>
       </div>
     </div>
   );
